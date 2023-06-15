@@ -12,6 +12,7 @@ create_student_record() {
   read id
 
   echo "$email,$age,$id" >> students-list_0333.txt
+  echo "Student's record has been created"
 }
 
 # View all students saved in the file and list them on the terminal
@@ -24,7 +25,13 @@ delete_student() {
   echo "Enter student ID:"
   read id
 
+  if ! grep -q "^$id," students-list_0333.txt; then
+    echo "Student's ID does not exist"
+    return 1
+  fi
+
   sed -i "/$id/d" students-list_0333.txt
+  echo "Student's record has been deleted "
 }
 
 # Update the student record in the list (By using the student ID)
@@ -39,6 +46,7 @@ update_student_record() {
   read age
 
   sed -i "/$id/c\\$email,$age,$id" students-list_0333.txt
+  echo "Student's record has been updated"
 }
 
 # Exit the application
