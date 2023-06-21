@@ -4,4 +4,4 @@ s.sine@alustudent.com,22,4
 j.habarugir@alustudent.com,24,5
 r.mustapha@alustudent.com,21,6
 b.uwituze@alustudent.com,22,7
-g.bior@alustudent.com,23,8
+G.bior@alustudent.com,23,8
